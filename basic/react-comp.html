@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <div id="app1"></div>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <!-- Babel Script -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/jsx">
+            function HomePage() {
+                return (
+                    <div>
+                    {/* Nesting the Header component */}
+                    <Header />
+                    <p>Home page component</p>
+                    </div>
+                );
+            }
+            function Header() {
+                return <h1>First React component</h1>;
+              }
+
+              const root = ReactDOM.createRoot(app1);
+              root.render(<HomePage/>)
+        </script>
+    </body>
+</html>
+
+

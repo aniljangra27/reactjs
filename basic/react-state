@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <div id="app1"></div>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <!-- Babel Script -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/jsx">
+            function HomePage() {
+                const [likes, setLikes] = React.useState(0);
+                function handleClick() {
+                    setLikes(likes + 1);
+                    console.log("button click", likes)
+                }
+                return(
+                    <button onClick={handleClick}>like </button>
+                );
+            }
+
+            function Header(props) {
+            return <h1>{props.title ? props.title : 'Default title'}</h1>;
+            }
+
+            const root = ReactDOM.createRoot(app1);
+            root.render(<HomePage />)
+        </script>
+    </body>
+</html>
